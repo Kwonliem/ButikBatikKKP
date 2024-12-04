@@ -712,3 +712,19 @@ body.dark-theme {
     zoom: 2.3;
   }
 }
+
+
+
+/* Scroll bar bray */
+
+::-webkit-scrollbar {
+  width: 15apx;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4af37;
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/img/logo.jpg" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>product Detail - Butik Batik Banyumasan</title>
+    </head>
+    <body>
+        <!-- ini header bray -->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="assets/img/logo.jpg" alt="">
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="ri-home-fill"></i>
+                                <span>Beranda</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#new" class="nav__link">
+                                <i class="ri-price-tag-3-fill"></i>
+                                <span>Produk Baru</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#collection" class="nav__link">
+                                <i class="ri-archive-fill"></i>
+                                <span>Koleksi</span>
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#products" class="nav__link">
+                                <i class="ri-t-shirt-fill"></i>
+                                <span>Produk</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                
+                <i class="ri-moon-fill change-theme" id="theme-button"></i>
+            </nav>
+        </header>
+
+        <!-- ini main page bray -->
+        <div class="page-content page-details">
+            <section
+              class="store-breadcrumbs"
+              data-aos="fade-down"
+              data-aos-delay="100"
+            >
+              <div class="container">
+                <div class="row">
+                  <div class="col-12">
+                    <nav>
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                          <a href="index.html">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active">Product Details</li>
+                      </ol>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </section>
+      
+            <section class="store-gallery mb-3" id="gallery">
+              <div class="container">
+                <div class="row">
+                  <div class="col-lg-8" data-aos="zoom-in">
+                    <transition name="slide-fade" mode="out-in">
+                      <img
+                        :src="photos[activePhoto].url"
+                        :key="photos[activePhoto].id"
+                        class="w-100 main-image"
+                        alt=""
+                      />
+                    </transition>
+                  </div>
+                  <div class="col-lg-2">
+                    <div class="row">
+                      <div
+                        class="col-3 col-lg-12 mt-2 mt-lg-0"
+                        v-for="(photo, index) in photos"
+                        :key="photo.id"
+                        data-aos="zoom-in"
+                        data-aos-delay="100"
+                      >
+                        <a href="#" @click="changeActive(index)">
+                          <img
+                            :src="photo.url"
+                            class="w-100 thumbnail-image"
+                            :class="{ active: index == activePhoto }"
+                            alt=""
+                          />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+        <!-- footer bray -->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div>
+                    <a href="#" class="footer__logo">
+                        <img src="assets/img/logo.jpg" alt="">
+                    </a>
+                    
+                    <p class="footer__description">
+                        Lorem ipsum dolor sit amet. <br> 
+                        Lorem ipsum dolor sit amet. <br>
+                        Lorem.
+                    </p>
+                </div>
+
+                <div class="footer__content">
+                    <div>
+                        <h3 class="footer__title">
+                            Toko
+                        </h3>
+
+                        <ul class="footer__links">
+                            <li>
+                                <a href="#" class="footer__link">Lorem</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">Lorem</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">Lorem Lorem</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- <div>
+                        <h3 class="footer__title">
+                            Berita
+                        </h3>
+
+                        <ul class="footer__links">
+                            <li>
+                                <a href="#" class="footer__link">Events</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">Berita Viral</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__link">Berita Terbaru</a>
+                            </li>
+                        </ul>
+                    </div> -->
+
+                    <div>
+                        <h3 class="footer__title">
+                            Toko Buka
+                        </h3>
+
+                        <p class="footer__information">
+                            Senin - Minggu <br>
+                            7:00 - 20:00 WIB
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="footer__title">
+                            Kontak Kami
+                        </h3>
+
+                        <ul class="footer__social">
+                            
+                            <a href="https://www.facebook.com/share/1G5xnPT4qo/" target="_blank" class="footer__social-link">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                            
+                            <a href="https://www.instagram.com/batik_banyumasan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="footer__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                            
+                            <a href="https://wa.link/ps8p2i" target="_blank" class="footer__social-link">
+                                <i class="ri-whatsapp-line"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__info container">
+                <span class="footer__copy">
+                    &#174; Butik Batik Banyumasan. All rigths reserved
+                </span>
+            </div>
+        </footer>
+
+        
+        <a href="#" class="scrollup" id="scroll-up">
+            <i class="ri-arrow-up-line"></i>
+        </a>
+        
+        
+        <script src="assets/js/scrollreveal.min.js"></script>
+
+        
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+       
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
